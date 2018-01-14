@@ -1,32 +1,33 @@
 {% extends "base.html" %}
+{% block head %}
+<meta id="labels_data" data-labels={{labels}}>  
+{% endblock head %}
 {% block content %}
-  <h1>Render a Image Directly by matplotlib</h1>
-  <h1>Flask Chart.js</h1>
+
+<h1>Top 10 words used by @{{twitterhandle|safe}} </h1>
   <!-- bar chart canvas element -->
-  <canvas id="chart" width="600" height="400"></canvas>
-<script>
-   var pieData = [
-            {% for item,label, colors in set %}
-                {
-                    value: {{item}},
-                    label: "{{label}}",
-                    color : "{{colors}}",
-                    labelColor : 'white',
-                    labelFontSize : '16'
-                },
-                {% endfor %}
- 
- 
-         ];
- 
-   // get bar chart canvas
-   var mychart = document.getElementById("chart").getContext("2d");
- 
-   steps = 10
-   max = 10
-   // draw pie chart
-   new Chart(document.getElementById("chart").getContext("2d")).Pie(pieData);
- 
-</script>
+  <canvas id="pie-chart" width="600" height="400"></canvas>
+
+  <script>
+    var labelsData = document.getElementById("labels_data");
+      console.log(labelsData.dataset.labels);
+      console.log(typeof labelsData.dataset.labels)
+    new Chart(document.getElementById("pie-chart"), {
+     type: 'pie',
+      data: {
+        labels: {{labels | safe}},
+        datasets: [{
+          label: "Population (millions)",
+          backgroundColor: {{colors|tojson }},
+          data: {{values|tojson}}
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Predicted world population (millions) in 2050'
+        }
+      }
+    });
+  </script>
 {% endblock %}
-    

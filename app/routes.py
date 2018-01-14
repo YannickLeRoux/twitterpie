@@ -14,10 +14,7 @@ def index():
 
 @app.route("/piechart/<twitterhandle>")
 def pie(twitterhandle):
-    import datetime
 
-    from io import BytesIO
-    import random
 
 
     
@@ -38,4 +35,5 @@ def pie(twitterhandle):
 
 
     # Render the Template
-    return render_template('pie.html', set=zip(values, labels, colors))
+    return render_template('pie.html', values=values, labels=labels,
+            colors=colors, twitterhandle=twitterhandle)
