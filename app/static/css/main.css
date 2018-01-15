@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Holtwood One SC', serif;
+  font-size: 45px;
+  letter-spacing: 0.03em;
+  color: #00ACED;
+  text-shadow: 2px 2px 2px #01161E;
+  font-weight: 400px;
+  margin: 40px auto 40px auto;
+}
+
+p{ 
+  font-family: 'PT Sans Narrow', sans-serif;
+  Font-Size: 18px;
+  letter-spacing: 0.03em;
+  color: #01161E;
+}
+
+.btn {
+	color: white;
+  background-color: #DCC48E;
+}
+
+.btn:hover {
+  color: #01161E;
+  background-color: #EAEFD3;
+}

@@ -79,7 +79,7 @@ def word_count(words):
         blacklist= b.read().split()
     
     for word in words.split():
-        if len(word) < 3 or word.lower() in blacklist or '@' in word or '#' in word:
+        if len(word) < 4 or word.lower() in blacklist or '@' in word or '#' in word:
             continue
         if word.lower() not in wordcount:
             wordcount[word.lower()] = 1
