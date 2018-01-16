@@ -27,5 +27,5 @@ def pie(twitterhandle):
             "#ABCABC", "#CAABB9", "#46F7F3", "#EFCDAB"]
 
     # Render the Template
-    return render_template('pie.html', values=values, labels=labels,
+    return render_template('pie.html', title="Top 10",values=values, labels=labels,
             colors=colors, twitterhandle=twitterhandle)
