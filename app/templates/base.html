@@ -19,8 +19,9 @@
 		<div class="spinner">
 			<img src="{{ url_for('static', filename='img/ajax-loader.gif') }}" alt="loading...">
 		</div>
-
+    <div class="container">
     {% block content %}{% endblock %}
+		</div>
   </body>
 	<script>
 		$(document).ready(function() {
