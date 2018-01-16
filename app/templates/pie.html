@@ -6,12 +6,15 @@
 
 <h1>Top 10 words used by @{{twitterhandle|safe}} </h1>
   <!-- bar chart canvas element -->
+
+  <p>** Hover over the chart to see the word count</p>
+  
+  <a href="{{ url_for('index') }}">Back to the Homepage</a>
+  <p></p>
   <canvas id="pie-chart" width="600" height="400"></canvas>
 
   <script>
     var labelsData = document.getElementById("labels_data");
-      console.log(labelsData.dataset.labels);
-      console.log(typeof labelsData.dataset.labels)
     new Chart(document.getElementById("pie-chart"), {
      type: 'pie',
       data: {
@@ -23,8 +26,8 @@
       },
       options: {
         title: {
-          display: true,
-          text: 'Predicted world population (millions) in 2050'
+          display: false,
+          text: 'The 10 most frequent words'
         }
       }
     });

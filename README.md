@@ -1,6 +1,6 @@
-## Twitterpie
+# Twitterpie
 
-# Web App made with Flask, Tweepy and Chart.js
+## Web App made with Flask, Tweepy and Chart.js
 
 This actually my first web app, so the code is going to get better with time
 (hopefully!)
