@@ -6,18 +6,21 @@
       <p>Enter a Twitter username below and click on "Generate" to get the<strong> 10
       most frequent words</strong> in the Twitter feed.</p>
     </div>
-    
-    <form action="" method="post">
-        {{ form.hidden_tag() }}
-        <p>
-				<strong> @ </strong> {{ form.twitterhandle(size=32, placeholder="Enter a Twitter Username..") }}
-        </p>
-        <p>{{ form.submit(class="btn btn-primary",id="button") }}</p>
-    </form>
-    <div class="footer">
+		<div class="search-area">
+			<form action="" method="post">
+					{{ form.hidden_tag() }}
+					<p>
+					<strong> @ </strong> {{ form.twitterhandle(size=32, placeholder="Enter a Twitter Username..") }}
+					</p>
+					<p>{{ form.submit(class="btn btn-primary",id="button") }}</p>
+			</form>
+		</div>
+		<div>
       <p>** Mostly working for English and French Language</p>
       <p>Feel free to check the <a href="https://github.com/YannickLeRoux/twitterpie">GitHub repository</a> and add your own language, or
     other interesting functionnalities</p>
-    </div>
+		</div>
+			<div id="footer"><small><em>Yannick Le Roux - Made with Python 3.6, Flask and Chart.js</em></small><div>
+    
 {% endblock %}
 
