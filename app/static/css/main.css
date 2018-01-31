@@ -13,12 +13,14 @@ h1 {
   margin: 40px auto 60px auto;
 }
 
+
 p{ 
   font-family: 'PT Sans Narrow', sans-serif;
   Font-Size: 18px;
   letter-spacing: 0.03em;
   color: #01161E;
 }
+
 
 .btn {
 	color: white;
@@ -47,6 +49,12 @@ p{
 		top:40%;
 		left:45%;
 		z-index:3;
+}
+
+@media screen and (max-width: 768px) and (min-width: 300px) {
+body {
+	padding: 10px;	
+}
 }
 
 /* .spinner { */

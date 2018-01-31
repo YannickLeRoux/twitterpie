@@ -3,14 +3,14 @@
 {% block content %}
     <h1>Hello, welcome to Twitter Pie!</h1>
     <div class="header">
-      <p>Enter a Twitter username below and click on "Generate" to get the 10
-      most frequent words in the Twitter feed.</p>
+      <p>Enter a Twitter username below and click on "Generate" to get the<strong> 10
+      most frequent words</strong> in the Twitter feed.</p>
     </div>
     
     <form action="" method="post">
         {{ form.hidden_tag() }}
         <p>
-            @ {{ form.twitterhandle(size=32) }}
+				<strong> @ </strong> {{ form.twitterhandle(size=32, placeholder="Enter a Twitter Username..") }}
         </p>
         <p>{{ form.submit(class="btn btn-primary",id="button") }}</p>
     </form>
