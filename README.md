@@ -11,4 +11,4 @@ meaningless, like "they" "but" "although" etc, so feel free to add some more, or
 
 ## Example:
 
-[Imgur](https://i.imgur.com/7cr9cGe.png)
+![img](https://i.imgur.com/7cr9cGe.png)
