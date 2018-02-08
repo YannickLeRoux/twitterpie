@@ -8,3 +8,7 @@ This actually my first web app, so the code is going to get better with time
 
 I used the file `'twitter_parser/blacklist.txt'` to remove from results the words that would be
 meaningless, like "they" "but" "although" etc, so feel free to add some more, or words from other languages too.
+
+## Example:
+
+![img](https://imgur.com/7cr9cGe)
